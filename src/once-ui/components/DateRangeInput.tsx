@@ -3,10 +3,8 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Input, DropdownWrapper, Flex, DateRange, DateRangePicker, Row } from ".";
 
-interface DateRangeInputProps extends Omit<
-    React.ComponentProps<typeof Input>,
-    "onChange" | "value" | "label"
-> {
+interface DateRangeInputProps
+    extends Omit<React.ComponentProps<typeof Input>, "onChange" | "value" | "label"> {
     id: string;
     startLabel: string;
     endLabel: string;
@@ -48,7 +46,7 @@ export const DateRangeInput: React.FC<DateRangeInputProps> = ({
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [inputValue, setInputValue] = useState(
-        value ? formatDateRange(value) : { startDate: "", endDate: "" }
+        value ? formatDateRange(value) : { startDate: "", endDate: "" },
     );
     useEffect(() => {
         if (value) {
@@ -64,7 +62,7 @@ export const DateRangeInput: React.FC<DateRangeInputProps> = ({
                 setIsOpen(false);
             }
         },
-        [onChange]
+        [onChange],
     );
 
     const handleInputClick = useCallback(() => {

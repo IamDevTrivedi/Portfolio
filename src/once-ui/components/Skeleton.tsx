@@ -30,11 +30,11 @@ const Skeleton: React.FC<SkeletonProps> = forwardRef<HTMLDivElement, SkeletonPro
                     width && styles["w-" + width],
                     height && styles["h-" + height],
                     delay && styles["delay-" + delay],
-                    className
+                    className,
                 )}
             />
         );
-    }
+    },
 );
 
 Skeleton.displayName = "Skeleton";

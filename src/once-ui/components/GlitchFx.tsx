@@ -23,7 +23,7 @@ const GlitchFx = forwardRef<HTMLDivElement, GlitchFxProps>(
             continuous = true,
             ...rest
         },
-        ref
+        ref,
     ) => {
         const [isGlitching, setIsGlitching] = useState(continuous || trigger === "instant");
 
@@ -102,7 +102,7 @@ const GlitchFx = forwardRef<HTMLDivElement, GlitchFxProps>(
                 </Flex>
             </Flex>
         );
-    }
+    },
 );
 
 GlitchFx.displayName = "GlitchFx";

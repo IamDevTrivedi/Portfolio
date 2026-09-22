@@ -32,7 +32,7 @@ const HeadingNav = forwardRef<HTMLDivElement, props>(({ className, style, ...res
                 isUpdatingRef.current = false;
             }
         },
-        [headings]
+        [headings],
     );
 
     useEffect(() => {
@@ -51,7 +51,7 @@ const HeadingNav = forwardRef<HTMLDivElement, props>(({ className, style, ...res
                 if (el) {
                     headingPositions.set(
                         el.id,
-                        el.getBoundingClientRect().top + window.scrollY - 150
+                        el.getBoundingClientRect().top + window.scrollY - 150,
                     );
                 }
             });
@@ -139,7 +139,7 @@ const HeadingNav = forwardRef<HTMLDivElement, props>(({ className, style, ...res
             {
                 rootMargin: "-150px 0px -30% 0px",
                 threshold: [0, 0.1, 0.5, 1],
-            }
+            },
         );
 
         headingElements.forEach((element) => {

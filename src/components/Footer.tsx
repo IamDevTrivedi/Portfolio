@@ -39,7 +39,7 @@ export const Footer = () => {
                                     size="s"
                                     variant="ghost"
                                 />
-                            )
+                            ),
                     )}
                 </Flex>
             </Flex>

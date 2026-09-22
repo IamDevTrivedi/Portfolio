@@ -248,7 +248,7 @@ export const MegaMenu: React.FC<MegaMenuProps> = ({ menuGroups, className, ...re
                                             </Column>
                                         ))}
                                     </Row>
-                                )
+                                ),
                         )}
                     </Row>
                 </Row>

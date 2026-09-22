@@ -54,7 +54,7 @@ const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
                 )}
             </Flex>
         );
-    }
+    },
 );
 
 AvatarGroup.displayName = "AvatarGroup";

@@ -182,7 +182,7 @@ export default function About() {
                                                     variant="secondary"
                                                 />
                                             </React.Fragment>
-                                        )
+                                        ),
                                 )}
                             </Flex>
                         )}
@@ -246,7 +246,7 @@ export default function About() {
                                                     >
                                                         {achievement}
                                                     </Text>
-                                                )
+                                                ),
                                             )}
                                         </Column>
                                         {experience.images.length > 0 && (

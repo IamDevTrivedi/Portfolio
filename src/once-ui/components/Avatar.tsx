@@ -37,7 +37,7 @@ const statusIndicatorSizeMapping: Record<"xs" | "s" | "m" | "l" | "xl", "s" | "m
 const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
     (
         { size = "m", value, src, loading, empty, statusIndicator, className, style = {}, ...rest },
-        ref
+        ref,
     ) => {
         const sizeInRem = typeof size === "number" ? `${size}rem` : undefined;
         const sizeStyle = sizeInRem
@@ -141,7 +141,7 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
                 )}
             </Flex>
         );
-    }
+    },
 );
 
 Avatar.displayName = "Avatar";

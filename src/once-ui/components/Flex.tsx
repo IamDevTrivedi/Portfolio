@@ -15,8 +15,7 @@ import {
 import { ColorScheme, ColorWeight, SpacingToken, TextVariant } from "../types";
 
 interface ComponentProps
-    extends
-        FlexProps,
+    extends FlexProps,
         SpacingProps,
         SizeProps,
         StyleProps,
@@ -113,17 +112,17 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
             children,
             ...rest
         },
-        ref
+        ref,
     ) => {
         if (onBackground && onSolid) {
             console.warn(
-                "You cannot use both 'onBackground' and 'onSolid' props simultaneously. Only one will be applied."
+                "You cannot use both 'onBackground' and 'onSolid' props simultaneously. Only one will be applied.",
             );
         }
 
         if (background && solid) {
             console.warn(
-                "You cannot use both 'background' and 'solid' props simultaneously. Only one will be applied."
+                "You cannot use both 'background' and 'solid' props simultaneously. Only one will be applied.",
             );
         }
 
@@ -198,7 +197,7 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
             generateDynamicClass("solid", solid),
             generateDynamicClass(
                 "border",
-                border || borderTop || borderRight || borderBottom || borderLeft
+                border || borderTop || borderRight || borderBottom || borderLeft,
             ),
             (border || borderTop || borderRight || borderBottom || borderLeft) &&
                 !borderStyle &&
@@ -261,12 +260,12 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
             light && "light-flex",
             colorClass,
             className,
-            ...variantClasses
+            ...variantClasses,
         );
 
         const parseDimension = (
             value: number | SpacingToken | undefined,
-            type: "width" | "height"
+            type: "width" | "height",
         ): string | undefined => {
             if (value === undefined) return undefined;
             if (typeof value === "number") return `${value}rem`;
@@ -317,7 +316,7 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(
                 {children}
             </Component>
         );
-    }
+    },
 );
 
 Flex.displayName = "Flex";

@@ -59,7 +59,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             validate,
             ...props
         },
-        ref
+        ref,
     ) => {
         const [isFocused, setIsFocused] = useState(false);
         const [isFilled, setIsFilled] = useState(!!props.value);
@@ -149,7 +149,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                             ? "radius-none"
                             : radius
                               ? `radius-l-${radius}`
-                              : "radius-l"
+                              : "radius-l",
                     )}
                 >
                     {hasPrefix && (
@@ -215,7 +215,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                 )}
             </Flex>
         );
-    }
+    },
 );
 
 Input.displayName = "Input";

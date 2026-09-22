@@ -22,7 +22,7 @@ export default async function sitemap() {
     }));
 
     const activeRoutes = Object.keys(routesConfig).filter(
-        (route) => routesConfig[route as keyof typeof routesConfig]
+        (route) => routesConfig[route as keyof typeof routesConfig],
     );
 
     const routePriorityMap: Record<string, number> = {

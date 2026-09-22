@@ -53,7 +53,7 @@ const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(
             onHover,
             ...rest
         },
-        ref
+        ref,
     ) => {
         const today = new Date();
         const [selectedDate, setSelectedDate] = useState<Date | undefined>(value);
@@ -69,10 +69,10 @@ const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(
         const [isTransitioning, setIsTransitioning] = useState(true);
 
         const [currentMonth, setCurrentMonth] = useState<number>(
-            value ? value.getMonth() : today.getMonth()
+            value ? value.getMonth() : today.getMonth(),
         );
         const [currentYear, setCurrentYear] = useState<number>(
-            value ? value.getFullYear() : today.getFullYear()
+            value ? value.getFullYear() : today.getFullYear(),
         );
 
         useEffect(() => {
@@ -220,7 +220,7 @@ const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(
                         >
                             {prevMonthDay}
                         </Button>
-                    </Flex>
+                    </Flex>,
                 );
             }
 
@@ -272,7 +272,7 @@ const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(
                                 {day}
                             </Button>
                         </Flex>
-                    </Flex>
+                    </Flex>,
                 );
             }
 
@@ -296,7 +296,7 @@ const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(
                         >
                             {i}
                         </Button>
-                    </Flex>
+                    </Flex>,
                 );
             }
 
@@ -405,7 +405,7 @@ const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(
                                     handleTimeChange(
                                         selectedTime?.hours ?? 0,
                                         selectedTime?.minutes ?? 0,
-                                        value === "PM"
+                                        value === "PM",
                                     )
                                 }
                             />
@@ -463,7 +463,7 @@ const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(
                 </RevealFx>
             </Flex>
         );
-    }
+    },
 );
 
 DatePicker.displayName = "DatePicker";

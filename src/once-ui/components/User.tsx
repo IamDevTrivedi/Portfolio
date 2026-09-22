@@ -19,7 +19,7 @@ interface UserProps {
 const User = forwardRef<HTMLDivElement, UserProps>(
     (
         { name, children, subline, tagProps = {}, loading = false, avatarProps = {}, className },
-        ref
+        ref,
     ) => {
         const { src, value, empty, ...restAvatarProps } = avatarProps;
         const isEmpty = empty || (!src && !value);
@@ -80,7 +80,7 @@ const User = forwardRef<HTMLDivElement, UserProps>(
                 )}
             </Flex>
         );
-    }
+    },
 );
 
 User.displayName = "User";

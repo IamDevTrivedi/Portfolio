@@ -6,7 +6,8 @@ import { Flex, Icon, InteractiveDetails, InteractiveDetailsProps } from ".";
 import styles from "./SharedInteractiveStyles.module.scss";
 
 interface CheckboxProps
-    extends Omit<InteractiveDetailsProps, "onClick">, React.InputHTMLAttributes<HTMLInputElement> {
+    extends Omit<InteractiveDetailsProps, "onClick">,
+        React.InputHTMLAttributes<HTMLInputElement> {
     isChecked?: boolean;
     isIndeterminate?: boolean;
     onToggle?: () => void;
@@ -25,7 +26,7 @@ const Checkbox: React.FC<CheckboxProps> = forwardRef<HTMLInputElement, CheckboxP
             disabled,
             ...props
         },
-        ref
+        ref,
     ) => {
         const [isChecked, setIsChecked] = useState(controlledIsChecked || false);
         const [checkboxId] = useState(generateId());
@@ -122,7 +123,7 @@ const Checkbox: React.FC<CheckboxProps> = forwardRef<HTMLInputElement, CheckboxP
                 )}
             </Flex>
         );
-    }
+    },
 );
 
 Checkbox.displayName = "Checkbox";

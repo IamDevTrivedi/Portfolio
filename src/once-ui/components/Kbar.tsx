@@ -176,7 +176,7 @@ export const KbarContent: React.FC<KbarContentProps> = ({ isOpen, onClose, items
                         if (selectedOption) {
                             // Find the original item to get the perform function or href
                             const originalItem = items.find(
-                                (item) => item.id === selectedOption.value
+                                (item) => item.id === selectedOption.value,
                             );
                             if (originalItem) {
                                 if (originalItem.href) {
@@ -192,7 +192,7 @@ export const KbarContent: React.FC<KbarContentProps> = ({ isOpen, onClose, items
                     break;
             }
         },
-        [nonCustomOptions, items, router, onClose, highlightedIndex]
+        [nonCustomOptions, items, router, onClose, highlightedIndex],
     );
 
     // Scroll highlighted element into view
@@ -348,7 +348,7 @@ export const KbarContent: React.FC<KbarContentProps> = ({ isOpen, onClose, items
 
                         // Find the index in the non-custom options array
                         const optionIndex = nonCustomOptions.findIndex(
-                            (item) => item.value === option.value
+                            (item) => item.value === option.value,
                         );
                         const isHighlighted = optionIndex === highlightedIndex;
 
@@ -443,7 +443,7 @@ export const Kbar: React.FC<KbarProps> = ({ items, children, ...rest }) => {
             {isOpen &&
                 createPortal(
                     <KbarContent isOpen={isOpen} onClose={handleClose} items={items} />,
-                    document.body
+                    document.body,
                 )}
         </>
     );

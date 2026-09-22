@@ -29,7 +29,7 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, s
                     variant: "danger",
                     message: "Failed to copy link.",
                 });
-            }
+            },
         );
     };
 

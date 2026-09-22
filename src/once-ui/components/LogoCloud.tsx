@@ -24,7 +24,7 @@ const STAGGER_DELAY = 25;
 const LogoCloud = forwardRef<HTMLDivElement, LogoCloudProps>(
     (
         { logos, className, style, limit = 6, rotationInterval = ANIMATION_DURATION, ...rest },
-        ref
+        ref,
     ) => {
         const [visibleLogos, setVisibleLogos] = useState<LogoProps[]>(() => logos.slice(0, limit));
         const [key, setKey] = useState(0);
@@ -39,7 +39,7 @@ const LogoCloud = forwardRef<HTMLDivElement, LogoCloudProps>(
                 () => {
                     setVisibleLogos((currentLogos) => {
                         const currentIndices = currentLogos.map((logo) =>
-                            logos.findIndex((l) => l === logo)
+                            logos.findIndex((l) => l === logo),
                         );
 
                         const nextIndices = currentIndices
@@ -51,7 +51,7 @@ const LogoCloud = forwardRef<HTMLDivElement, LogoCloudProps>(
                         return nextLogos;
                     });
                 },
-                rotationInterval + STAGGER_DELAY * limit
+                rotationInterval + STAGGER_DELAY * limit,
             );
 
             return () => clearInterval(interval);
@@ -85,7 +85,7 @@ const LogoCloud = forwardRef<HTMLDivElement, LogoCloudProps>(
                 ))}
             </Grid>
         );
-    }
+    },
 );
 
 LogoCloud.displayName = "LogoCloud";

@@ -7,10 +7,8 @@ import { IconButton } from ".";
 import styles from "./NumberInput.module.scss";
 import classNames from "classnames";
 
-interface NumberInputProps extends Omit<
-    React.ComponentProps<typeof Input>,
-    "type" | "value" | "onChange"
-> {
+interface NumberInputProps
+    extends Omit<React.ComponentProps<typeof Input>, "type" | "value" | "onChange"> {
     value?: number;
     onChange?: (value: number) => void;
     min?: number;
@@ -24,7 +22,7 @@ const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
         const [localValue, setLocalValue] = useState<string>(
             padStart && value !== undefined
                 ? value.toString().padStart(padStart, "0")
-                : (value?.toString() ?? "")
+                : (value?.toString() ?? ""),
         );
 
         const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -118,7 +116,7 @@ const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
                 className={styles.numberInput}
             />
         );
-    }
+    },
 );
 
 NumberInput.displayName = "NumberInput";

@@ -133,7 +133,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
                                 vertical="center"
                                 className={classNames(
                                     styles.select,
-                                    selectedShape === radius ? styles.selected : ""
+                                    selectedShape === radius ? styles.selected : "",
                                 )}
                                 onClick={() => {
                                     setSelectedShape(radius);
@@ -178,7 +178,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
                                 vertical="center"
                                 className={classNames(
                                     styles.select,
-                                    brandColor === color ? styles.selected : ""
+                                    brandColor === color ? styles.selected : "",
                                 )}
                                 onClick={() => {
                                     setBrandColor(color);
@@ -213,7 +213,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
                                 vertical="center"
                                 className={classNames(
                                     styles.select,
-                                    accentColor === color ? styles.selected : ""
+                                    accentColor === color ? styles.selected : "",
                                 )}
                                 onClick={() => {
                                     setAccentColor(color);
@@ -247,7 +247,7 @@ const StylePanel = forwardRef<HTMLDivElement, StylePanelProps>(({ ...rest }, ref
                                 vertical="center"
                                 className={classNames(
                                     styles.select,
-                                    neutralColor === color ? styles.selected : ""
+                                    neutralColor === color ? styles.selected : "",
                                 )}
                                 onClick={() => {
                                     setNeutralColor(color);

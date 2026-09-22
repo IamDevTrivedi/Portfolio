@@ -32,7 +32,7 @@ const Kbd = forwardRef<HTMLDivElement, KbdProps>(
                 {label || children}
             </Text>
         </Flex>
-    )
+    ),
 );
 
 Kbd.displayName = "Kbd";

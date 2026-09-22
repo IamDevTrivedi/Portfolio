@@ -56,7 +56,7 @@ const ToggleButton = forwardRef<HTMLElement, ToggleButtonProps>(
             href,
             ...props
         },
-        ref
+        ref,
     ) => {
         return (
             <ElementType
@@ -80,7 +80,7 @@ const ToggleButton = forwardRef<HTMLElement, ToggleButtonProps>(
                         ["fit-width"]: !fillWidth,
                         ["justify-" + justifyContent]: justifyContent,
                     },
-                    className
+                    className,
                 )}
                 style={style}
                 {...props}
@@ -102,7 +102,7 @@ const ToggleButton = forwardRef<HTMLElement, ToggleButtonProps>(
                 {suffixIcon && <Icon name={suffixIcon} size={size === "l" ? "s" : "xs"} />}
             </ElementType>
         );
-    }
+    },
 );
 
 ToggleButton.displayName = "ToggleButton";

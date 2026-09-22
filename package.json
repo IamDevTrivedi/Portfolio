@@ -8,8 +8,8 @@
         "start": "next start",
         "preview": "next build && next start -p 3000",
         "lint": "next lint",
-        "format": "prettier --write .",
-        "format:check": "prettier --check .",
+        "format": "biome format --write .",
+        "format:check": "biome check .",
         "prepare": "husky"
     },
     "dependencies": {
@@ -36,6 +36,7 @@
         "sharp": "^0.34.1"
     },
     "devDependencies": {
+        "@biomejs/biome": "^2.5.14",
         "@csstools/postcss-global-data": "^2.1.1",
         "@types/cookie": "^0.6.0",
         "@types/node": "^20.17.30",
@@ -47,7 +48,6 @@
         "lint-staged": "^17.3.0",
         "postcss-custom-media": "^10.0.8",
         "postcss-flexbugs-fixes": "^5.0.2",
-        "prettier": "^3.8.1",
         "typescript": "^5.8.3"
     }
 }

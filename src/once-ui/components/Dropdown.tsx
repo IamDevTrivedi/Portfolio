@@ -35,7 +35,7 @@ const Dropdown = forwardRef<HTMLDivElement, DropdownProps>(
                 </Flex>
             </Flex>
         );
-    }
+    },
 );
 
 Dropdown.displayName = "Dropdown";

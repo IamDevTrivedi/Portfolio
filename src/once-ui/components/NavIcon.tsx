@@ -31,7 +31,7 @@ const NavIcon = forwardRef<HTMLDivElement, Partial<NavIconProps>>(
                 <div className={classNames(styles.line, isActive && styles.active)} />
             </Flex>
         );
-    }
+    },
 );
 
 NavIcon.displayName = "NavIcon";

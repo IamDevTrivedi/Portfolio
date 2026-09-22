@@ -11,8 +11,7 @@ import { Placement } from "@floating-ui/react-dom";
 type SelectOptionType = Omit<OptionProps, "selected">;
 
 interface SelectProps
-    extends
-        Omit<InputProps, "onSelect" | "value">,
+    extends Omit<InputProps, "onSelect" | "value">,
         Pick<DropdownWrapperProps, "minHeight" | "minWidth" | "maxWidth"> {
     options: SelectOptionType[];
     value?: string;
@@ -40,7 +39,7 @@ const Select = forwardRef<HTMLDivElement, SelectProps>(
             style,
             ...rest
         },
-        ref
+        ref,
     ) => {
         const [isFocused, setIsFocused] = useState(false);
         const [isFilled, setIsFilled] = useState(!!value);
@@ -228,7 +227,7 @@ const Select = forwardRef<HTMLDivElement, SelectProps>(
                                     option.label
                                         ?.toString()
                                         .toLowerCase()
-                                        .includes(searchQuery.toLowerCase())
+                                        .includes(searchQuery.toLowerCase()),
                                 )
                                 .map((option, index) => (
                                     <Option
@@ -248,7 +247,7 @@ const Select = forwardRef<HTMLDivElement, SelectProps>(
                                     option.label
                                         ?.toString()
                                         .toLowerCase()
-                                        .includes(searchQuery.toLowerCase())
+                                        .includes(searchQuery.toLowerCase()),
                                 ).length === 0 && (
                                     <Flex
                                         fillWidth
@@ -265,7 +264,7 @@ const Select = forwardRef<HTMLDivElement, SelectProps>(
                 }
             />
         );
-    }
+    },
 );
 
 Select.displayName = "Select";

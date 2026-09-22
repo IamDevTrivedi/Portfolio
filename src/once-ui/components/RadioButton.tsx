@@ -6,7 +6,8 @@ import { Flex, InteractiveDetails, InteractiveDetailsProps } from ".";
 import styles from "./SharedInteractiveStyles.module.scss";
 
 interface RadioButtonProps
-    extends Omit<InteractiveDetailsProps, "onClick">, React.InputHTMLAttributes<HTMLInputElement> {
+    extends Omit<InteractiveDetailsProps, "onClick">,
+        React.InputHTMLAttributes<HTMLInputElement> {
     style?: React.CSSProperties;
     className?: string;
     isChecked?: boolean;
@@ -30,7 +31,7 @@ const RadioButton: React.FC<RadioButtonProps> = forwardRef<HTMLInputElement, Rad
             disabled,
             ...props
         },
-        ref
+        ref,
     ) => {
         const [isChecked, setIsChecked] = useState(controlledIsChecked || false);
         const [radioId] = useState(generateId());
@@ -113,7 +114,7 @@ const RadioButton: React.FC<RadioButtonProps> = forwardRef<HTMLInputElement, Rad
                 {props.label && <InteractiveDetails id={radioId} {...props} onClick={toggleItem} />}
             </Flex>
         );
-    }
+    },
 );
 
 RadioButton.displayName = "RadioButton";

@@ -7,7 +7,8 @@ import styles from "./UserMenu.module.scss";
 import { DropdownWrapperProps } from "./DropdownWrapper";
 
 interface UserMenuProps
-    extends UserProps, Pick<DropdownWrapperProps, "minHeight" | "minWidth" | "maxWidth"> {
+    extends UserProps,
+        Pick<DropdownWrapperProps, "minHeight" | "minWidth" | "maxWidth"> {
     selected?: boolean;
     dropdown?: React.ReactNode;
     className?: string;
@@ -44,7 +45,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
                     className={classNames(
                         className || "",
                         selected ? styles.selected : "",
-                        styles.wrapper
+                        styles.wrapper,
                     )}
                     style={style}
                 >

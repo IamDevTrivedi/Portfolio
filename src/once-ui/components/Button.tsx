@@ -60,7 +60,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps | AnchorProps>(
             style,
             ...props
         },
-        ref
+        ref,
     ) => {
         const iconSize = size === "l" ? "s" : size === "m" ? "s" : "xs";
         const radiusSize = size === "s" || size === "m" ? "m" : "l";
@@ -87,7 +87,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps | AnchorProps>(
                         ["fit-width"]: !fillWidth,
                         ["justify-" + justifyContent]: justifyContent,
                     },
-                    className
+                    className,
                 )}
                 style={style}
                 {...props}
@@ -118,7 +118,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps | AnchorProps>(
                 {suffixIcon && <Icon name={suffixIcon} size={iconSize} />}
             </ElementType>
         );
-    }
+    },
 );
 
 Button.displayName = "Button";

@@ -60,7 +60,7 @@ const Badge = forwardRef<HTMLDivElement | HTMLAnchorElement, BadgeProps>(
         return React.cloneElement(content, {
             ref: ref as React.Ref<HTMLDivElement>,
         });
-    }
+    },
 );
 
 Badge.displayName = "Badge";

@@ -36,7 +36,7 @@ const Feedback = forwardRef<HTMLDivElement, FeedbackProps>(
             children,
             ...rest
         },
-        ref
+        ref,
     ) => {
         return (
             <Flex
@@ -111,7 +111,7 @@ const Feedback = forwardRef<HTMLDivElement, FeedbackProps>(
                 </Flex>
             </Flex>
         );
-    }
+    },
 );
 
 Feedback.displayName = "Feedback";

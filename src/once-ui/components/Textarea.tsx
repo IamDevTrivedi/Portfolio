@@ -61,7 +61,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             style,
             ...props
         },
-        ref
+        ref,
     ) => {
         const [isFocused, setIsFocused] = useState(false);
         const [isFilled, setIsFilled] = useState(!!props.value);
@@ -138,7 +138,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
                 [styles.withSuffix]: hasSuffix,
                 [styles.labelAsPlaceholder]: labelAsPlaceholder,
                 [styles.hasChildren]: children,
-            }
+            },
         );
 
         return (
@@ -165,7 +165,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
                             ? "radius-none"
                             : radius
                               ? `radius-l-${radius}`
-                              : "radius-l"
+                              : "radius-l",
                     )}
                 >
                     {hasPrefix && (
@@ -246,7 +246,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
                 )}
             </Flex>
         );
-    }
+    },
 );
 
 Textarea.displayName = "Textarea";

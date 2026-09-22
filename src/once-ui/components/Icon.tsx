@@ -31,7 +31,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
             tooltipPosition = "top",
             ...rest
         },
-        ref
+        ref,
     ) => {
         const IconComponent: IconType | undefined = iconLibrary[name];
         const [isTooltipVisible, setTooltipVisible] = useState(false);
@@ -67,7 +67,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
 
         if (onBackground && onSolid) {
             console.warn(
-                "You cannot use both 'onBackground' and 'onSolid' props simultaneously. Only one will be applied."
+                "You cannot use both 'onBackground' and 'onSolid' props simultaneously. Only one will be applied.",
             );
         }
 
@@ -93,7 +93,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
                 )}
             </Flex>
         );
-    }
+    },
 );
 
 Icon.displayName = "Icon";

@@ -47,7 +47,7 @@ const Text = <T extends ElementType = "span">({
 
     if (onBackground && onSolid) {
         console.warn(
-            "You cannot use both 'onBackground' and 'onSolid' props simultaneously. Only one will be applied."
+            "You cannot use both 'onBackground' and 'onSolid' props simultaneously. Only one will be applied.",
         );
     }
 
@@ -91,7 +91,7 @@ const Text = <T extends ElementType = "span">({
         generateClassName("mt", marginTop),
         generateClassName("mb", marginBottom),
         generateClassName("mx", marginX),
-        generateClassName("my", marginY)
+        generateClassName("my", marginY),
     );
 
     return (

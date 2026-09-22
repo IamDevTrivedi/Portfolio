@@ -36,7 +36,7 @@ const SmartLink = forwardRef<HTMLAnchorElement, SmartLinkProps>(
             children,
             ...props
         },
-        ref
+        ref,
     ) => {
         const content = (
             <>
@@ -55,7 +55,7 @@ const SmartLink = forwardRef<HTMLAnchorElement, SmartLinkProps>(
                     "fill-width": fillWidth,
                     "fit-width": !fillWidth,
                     "px-2 mx-2": !unstyled,
-                }
+                },
             ),
             style: !unstyled
                 ? {
@@ -76,7 +76,7 @@ const SmartLink = forwardRef<HTMLAnchorElement, SmartLinkProps>(
                 {content}
             </ElementType>
         );
-    }
+    },
 );
 
 SmartLink.displayName = "SmartLink";

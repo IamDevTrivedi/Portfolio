@@ -32,7 +32,7 @@ const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
                 </Flex>
             </Flex>
         );
-    }
+    },
 );
 
 Spinner.displayName = "Spinner";

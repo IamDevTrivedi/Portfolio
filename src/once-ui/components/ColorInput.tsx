@@ -103,7 +103,7 @@ const ColorInput = forwardRef<HTMLInputElement, ColorInputProps>(
                 onChange={onChange}
             />
         );
-    }
+    },
 );
 
 ColorInput.displayName = "ColorInput";

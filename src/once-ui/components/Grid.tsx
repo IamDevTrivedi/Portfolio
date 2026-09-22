@@ -15,8 +15,7 @@ import {
 import { SpacingToken, ColorScheme, ColorWeight } from "../types";
 
 interface ComponentProps
-    extends
-        GridProps,
+    extends GridProps,
         SpacingProps,
         SizeProps,
         StyleProps,
@@ -106,7 +105,7 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
             children,
             ...rest
         },
-        ref
+        ref,
     ) => {
         const generateDynamicClass = (type: string, value: string | "-1" | undefined) => {
             if (!value) return undefined;
@@ -131,7 +130,7 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
 
         const parseDimension = (
             value: number | SpacingToken | undefined,
-            type: "width" | "height"
+            type: "width" | "height",
         ): string | undefined => {
             if (value === undefined) return undefined;
             if (typeof value === "number") return `${value}rem`;
@@ -202,7 +201,7 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
             generateDynamicClass("solid", solid),
             generateDynamicClass(
                 "border",
-                border || borderTop || borderRight || borderBottom || borderLeft
+                border || borderTop || borderRight || borderBottom || borderLeft,
             ),
             (border || borderTop || borderRight || borderBottom || borderLeft) &&
                 !borderStyle &&
@@ -235,7 +234,7 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
             cursor && `cursor-${cursor}`,
             dark && "dark-grid",
             light && "light-grid",
-            className
+            className,
         );
 
         const combinedStyle: CSSProperties = {
@@ -255,7 +254,7 @@ const Grid = forwardRef<HTMLDivElement, ComponentProps>(
                 {children}
             </Component>
         );
-    }
+    },
 );
 
 Grid.displayName = "Grid";

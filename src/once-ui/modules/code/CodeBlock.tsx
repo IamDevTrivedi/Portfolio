@@ -256,7 +256,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
                                 `language-${language}`,
                                 {
                                     "line-numbers": lineNumbers,
-                                }
+                                },
                             )}
                             tabIndex={-1}
                         >

@@ -102,7 +102,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
 
     const getYouTubeEmbedUrl = (url: string) => {
         const match = url.match(
-            /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
+            /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/,
         );
         return match
             ? `https://www.youtube.com/embed/${match[1]}?controls=0&rel=0&modestbranding=1`
